@@ -28,22 +28,6 @@ namespace BlablacarApi
             Headers = new Dictionary<string, string>();
         }
 
-        public void Run()
-        {
-            _request = (HttpWebRequest)WebRequest.Create(_address);
-            _request.Method = "Post";
-
-            try
-            {
-                HttpWebResponse response = (HttpWebResponse)_request.GetResponse();
-                var stream = response.GetResponseStream();
-                if (stream != null) Response = new StreamReader(stream).ReadToEnd();
-            }
-            catch (Exception)
-            {
-            }
-        }
-
         public void Run(CookieContainer cookieContainer)
         {
             _request = (HttpWebRequest)WebRequest.Create(_address);
