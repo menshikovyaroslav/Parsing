@@ -16,6 +16,8 @@ namespace BlablacarApi
         public string Response { get; set; }
         public string Accept { get; set; }
         public string Host { get; set; }
+        public string Referer { get; set; }
+        public string Useragent { get; set; }
         public WebProxy Proxy { get; set; }
 
         public GetRequest(string address)
@@ -48,7 +50,8 @@ namespace BlablacarApi
             _request.Proxy = Proxy;
             _request.Accept = Accept;
             _request.Host = Host;
-
+            _request.Referer = Referer;
+            _request.UserAgent = Useragent;
 
             foreach (var pair in Headers)
             {
