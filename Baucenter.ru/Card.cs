@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Baucenter.ru
 {
+    /// <summary>
+    /// Класс карточка товара.
+    /// Метод Parse - парсинг HTML, запись свойств Title и Price
+    /// </summary>
     public class Card
     {
         public string Price { get; set; }
