@@ -12,7 +12,7 @@ namespace Baucenter.ru
     {
         static void Main(string[] args)
         {
-            var code = "536000644";
+            var code = "416001653";
             var proxy = new WebProxy("127.0.0.1:8888");
             var cookieContainer = new CookieContainer();
 
@@ -26,12 +26,12 @@ namespace Baucenter.ru
             postRequest.Proxy = proxy;
 
             postRequest.Headers.Add("Bx-ajax", "true");
-            postRequest.Headers.Add("Origin", "https://baucenter.ru");
-            postRequest.Headers.Add("sec-ch-ua", "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"");
-            postRequest.Headers.Add("sec-ch-ua-mobile", "?0");
-            postRequest.Headers.Add("Sec-Fetch-Dest", "empty");
-            postRequest.Headers.Add("Sec-Fetch-Mode", "cors");
-            postRequest.Headers.Add("Sec-Fetch-Site", "same-origin");
+            //postRequest.Headers.Add("Origin", "https://baucenter.ru");
+            //postRequest.Headers.Add("sec-ch-ua", "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"");
+            //postRequest.Headers.Add("sec-ch-ua-mobile", "?0");
+            //postRequest.Headers.Add("Sec-Fetch-Dest", "empty");
+            //postRequest.Headers.Add("Sec-Fetch-Mode", "cors");
+            //postRequest.Headers.Add("Sec-Fetch-Site", "same-origin");
 
             postRequest.Run(cookieContainer);
 
@@ -47,12 +47,12 @@ namespace Baucenter.ru
             getRequest.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";
             getRequest.Useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36";
             getRequest.Referer = "https://baucenter.ru/";
-            getRequest.Headers.Add("sec-ch-ua", "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"");
-            getRequest.Headers.Add("sec-ch-ua-mobile", "?0");
-            getRequest.Headers.Add("Sec-Fetch-Dest", "document");
-            getRequest.Headers.Add("Sec-Fetch-Mode", "navigate");
-            getRequest.Headers.Add("Sec-Fetch-Site", "same-origin");
-            getRequest.Headers.Add("Upgrade-Insecure-Requests", "1");
+            //getRequest.Headers.Add("sec-ch-ua", "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"");
+            //getRequest.Headers.Add("sec-ch-ua-mobile", "?0");
+            //getRequest.Headers.Add("Sec-Fetch-Dest", "document");
+            //getRequest.Headers.Add("Sec-Fetch-Mode", "navigate");
+            //getRequest.Headers.Add("Sec-Fetch-Site", "same-origin");
+            //getRequest.Headers.Add("Upgrade-Insecure-Requests", "1");
             getRequest.Host = "baucenter.ru";
             getRequest.Proxy = proxy;
             getRequest.Run(cookieContainer);
